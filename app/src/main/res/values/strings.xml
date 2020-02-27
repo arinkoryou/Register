@@ -2,6 +2,8 @@
     <string name="app_name">スマレジ</string>
     <string name="textReji">レジ</string>
     <string name="textEdit">編集</string>
+    <string name="textCaluc">電卓</string>
     <string name="textClose">終了</string>
+    <string name="textKaikei">会計</string>
     <string name="textAdd">＋</string>
 </resources>

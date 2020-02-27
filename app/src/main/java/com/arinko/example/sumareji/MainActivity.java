@@ -2,8 +2,11 @@ package com.arinko.example.sumareji;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +29,29 @@ public class MainActivity extends AppCompatActivity {
 
         // Adapterにリストを渡す
         ltShop.setAdapter(adapter);
+
+        // ボタンクリックリスナを登録
+        Button mvRegister = this.findViewById(R.id.btRegi);
+        mvRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveRegister();
+            }
+        });
+    }
+
+    /**
+     * リストがタップされた時の処理クラス
+     */
+
+    /**
+     * レジボタンが押下された時の処理
+     */
+    private void moveRegister(){
+        // インテントオブジェクトを生成
+        Intent intent = new Intent(this, registerMaine.class);
+        // レジ画面の起動
+        startActivity(intent);
     }
 
     @Override
