@@ -22,20 +22,27 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
 
         // リストに店舗名を登録（仮）
-        adapter.add("店舗１");
+/*        adapter.add("店舗１");
         adapter.add("店舗２");
-        adapter.add("店舗３");
+        adapter.add("店舗３");*/
         adapter.add("＋");
 
         // Adapterにリストを渡す
         ltShop.setAdapter(adapter);
 
         // ボタンクリックリスナを登録
-        Button mvRegister = this.findViewById(R.id.btRegi);
+        Button mvRegister = this.findViewById(R.id.btRegi);       // レジボタン
+        Button mvStoreEdit = this.findViewById(R.id.btEdit);      // 編集ボタン
         mvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 moveRegister();
+            }
+        });
+        mvStoreEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveStoreEdit();
             }
         });
     }
@@ -50,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
     private void moveRegister(){
         // インテントオブジェクトを生成
         Intent intent = new Intent(this, registerMaine.class);
+        // レジ画面の起動
+        startActivity(intent);
+    }
+    /**
+     * 編集ボタンが押下された時の処理
+     */
+    private void moveStoreEdit(){
+        // インテントオブジェクトを生成
+        Intent intent = new Intent(this, storeEdit.class);
         // レジ画面の起動
         startActivity(intent);
     }

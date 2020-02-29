@@ -4,6 +4,10 @@
     <string name="textEdit">編集</string>
     <string name="textCaluc">電卓</string>
     <string name="textClose">終了</string>
+    <string name="textEnd">完了</string>
+    <string name="textBack">戻る</string>
     <string name="textKaikei">会計</string>
+    <string name="text">店舗名</string>
+    <string name="msgStoreName">店舗名を入力してください</string>
     <string name="textAdd">＋</string>
 </resources>
