@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         // ボタンクリックリスナを登録
         Button mvRegister = this.findViewById(R.id.btRegi);       // レジボタン
-        Button mvStoreEdit = this.findViewById(R.id.btEdit);      // 編集ボタン
         mvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 moveRegister();
             }
         });
+        Button mvStoreEdit = this.findViewById(R.id.btEdit);      // 編集ボタン
         mvStoreEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
